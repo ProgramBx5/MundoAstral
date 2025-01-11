@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinastría con Submenús</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2> <a class="menuu" href="index.html">Menú</a> </h2>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Inicio</a>
+                        <ul class="submenu">
+                            <li><a href="introduccion.html">Introducción al test</a></li>
+                            <li><a href="introduccion.html">Qué es la compatibilidad astrológica</a></li>
+                            <li><a href="introduccion.html">Ejemplos de parejas famosas</a></li>
+                            <li><a href="introduccion.html">Noticias de astrología</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="test.html" class="submenu-toggle menu-p">Iniciar Test</a>
+                    <ul class="submenu">
+                        <li><a href="test.html">Realizar Test</a></li>                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Zodiaco y Compatibilidad</a>
+                    <ul class="submenu">
+                        <li><a href="#descripcion">Descripción de signos</a></li>
+                        <li><a href="#combinaciones">Combinaciones comunes</a></li>
+                        <li><a href="#elementos">Relación con elementos</a></li>
+                        <li><a href="#tendencias">Tendencias astrológicas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Recursos</a>
+                    <ul class="submenu">
+                        <li><a href="recursos.html">Blogs de astrología</a></li>
+                        <li><a href="recursos.html">Videos explicativos</a></li>
+                        <li><a href="recursos.html">Libros recomendados</a></li>
+                        <li><a href="recursos.html">Aplicaciones complementarias</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="cont-introduccion ">
+            <div class="boxt">
+                <h1>Blog</h1>
+                <p>https://aprendeastrologia.com/blog/</p>
+                <p>https://blogastrologico.com.ar</p>
+                <p>https://www.lacasa8astrologia.com/blogs/blog-de-astrologia</p>
+            </div>
+            <div class="boxt ">
+                <h1>Videos explicativos</h1>
+                <div class="videoss">
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="Video de YouTube"
+                            allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>                    
+                    </div>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/watch?v=6wcFqLLaqug" 
+                            title="Video de YouTube"
+                            allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>                    
+                    </div>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/watch?v=LpKq2kQo_5s" 
+                            title="Video de YouTube"
+                            allow="autoplay; fullscreen; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>                    
+                    </div>
+                </div>
+            </div>
+
+        <script>
+            // Lógica para mostrar/ocultar submenús
+             document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+                toggle.addEventListener('click', event => {
+                    event.preventDefault();
+                    const submenu = toggle.nextElementSibling;
+                    submenu.classList.toggle('active');
+                });
+            });
+            
+        </script>
+    </body>
+    </html>

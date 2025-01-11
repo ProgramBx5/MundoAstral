@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinastría con Submenús</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2> <a class="menuu" href="index.html">Menú</a> </h2>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Inicio</a>
+                        <ul class="submenu">
+                            <li><a href="introduccion.html">Introducción al test</a></li>
+                            <li><a href="introduccion.html">Qué es la compatibilidad astrológica</a></li>
+                            <li><a href="introduccion.html">Ejemplos de parejas famosas</a></li>
+                            <li><a href="introduccion.html">Noticias de astrología</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="test.html" class="submenu-toggle menu-p">Iniciar Test</a>
+                    <ul class="submenu">
+                        <li><a href="test.html">Realizar Test</a></li>                        
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Zodiaco y Compatibilidad</a>
+                    <ul class="submenu">
+                        <li><a href="#descripcion">Descripción de signos</a></li>
+                        <li><a href="#combinaciones">Combinaciones comunes</a></li>
+                        <li><a href="#elementos">Relación con elementos</a></li>
+                        <li><a href="#tendencias">Tendencias astrológicas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Recursos</a>
+                    <ul class="submenu">
+                        <li><a href="recursos.html">Blogs de astrología</a></li>
+                        <li><a href="recursos.html">Videos explicativos</a></li>
+                        <li><a href="recursos.html">Libros recomendados</a></li>
+                        <li><a href="recursos.html">Aplicaciones complementarias</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="contenedor-test">
+        <section id="test">
+            <!-- Contenido Principal -->
+            <main class="content">
+                <header>
+                    <h1>Compatibilidad de signos</h1>
+                </header>
+                <section>
+                    <h2>prueba que signo eres compatible</h2>
+                    <p>Explora la compatibilidad astrológica con nuestra herramienta.</p>
+                </section>
+            </main>
+            <div class="test-form">
+                <h2>Realiza tu Test</h2>
+                <label for="signoPropio">Selecciona tu signo zodiacal:</label>
+                <select id="signoPropio">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <label for="signoPareja">Selecciona el signo zodiacal de tu pareja:</label>
+                <select id="signoPareja">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <button onclick="calcularCompatibilidad()">Calcular Compatibilidad</button>
+    
+                <div id="resultado" class="results"></div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para mostrar/ocultar submenús
+         document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+            toggle.addEventListener('click', event => {
+                event.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                submenu.classList.toggle('active');
+            });
+        });
+        // funciones para la compatibilidad
+        function calcularCompatibilidad() {
+            const signoPropio = document.getElementById('signoPropio').value;
+            const signoPareja = document.getElementById('signoPareja').value;
+
+            if (!signoPropio || !signoPareja) {
+                alert('Por favor, selecciona todas las opciones para continuar.');
+                return;
+            }
+
+            const compatibilidades = {
+                Aries: { Aries: 50, Tauro: 70, Géminis: 90, Cáncer: 60, Leo: 85, Virgo: 55, Libra: 75, Escorpio: 65, Sagitario: 95, Capricornio: 45, Acuario: 80, Piscis: 50 },
+                Tauro: { Aries: 70, Tauro: 60, Géminis: 55, Cáncer: 85, Leo: 50, Virgo: 90, Libra: 65, Escorpio: 75, Sagitario: 40, Capricornio: 95, Acuario: 45, Piscis: 80 },
+                Géminis: { Aries: 90, Tauro: 55, Géminis: 70, Cáncer: 50, Leo: 85, Virgo: 65, Libra: 95, Escorpio: 60, Sagitario: 80, Capricornio: 45, Acuario: 90, Piscis: 70 },
+                Cáncer: { Aries: 60, Tauro: 85, Géminis: 50, Cáncer: 75, Leo: 65, Virgo: 80, Libra: 55, Escorpio: 95, Sagitario: 40, Capricornio: 85, Acuario: 50, Piscis: 90 },
+                Leo: { Aries: 85, Tauro: 50, Géminis: 85, Cáncer: 65, Leo: 70, Virgo: 60, Libra: 90, Escorpio: 75, Sagitario: 95, Capricornio: 55, Acuario: 85, Piscis: 65 },
+                Virgo: { Aries: 55, Tauro: 90, Géminis: 65, Cáncer: 80, Leo: 60, Virgo: 75, Libra: 70, Escorpio: 85, Sagitario: 50, Capricornio: 95, Acuario: 45, Piscis: 85 },
+                Libra: { Aries: 75, Tauro: 65, Géminis: 95, Cáncer: 55, Leo: 90, Virgo: 70, Libra: 80, Escorpio: 65, Sagitario: 85, Capricornio: 50, Acuario: 95, Piscis: 75 },
+                Escorpio: { Aries: 65, Tauro: 75, Géminis: 60, Cáncer: 95, Leo: 75, Virgo: 85, Libra: 65, Escorpio: 70, Sagitario: 55, Capricornio: 90, Acuario: 50, Piscis: 85 },
+                Sagitario: { Aries: 95, Tauro: 40, Géminis: 80, Cáncer: 40, Leo: 95, Virgo: 50, Libra: 85, Escorpio: 55, Sagitario: 70, Capricornio: 60, Acuario: 90, Piscis: 75 },
+                Capricornio: { Aries: 45, Tauro: 95, Géminis: 45, Cáncer: 85, Leo: 55, Virgo: 95, Libra: 50, Escorpio: 90, Sagitario: 60, Capricornio: 70, Acuario: 65, Piscis: 80 },
+                Acuario: { Aries: 80, Tauro: 45, Géminis: 90, Cáncer: 50, Leo: 85, Virgo: 45, Libra: 95, Escorpio: 50, Sagitario: 90, Capricornio: 65, Acuario: 75, Piscis: 70 },
+                Piscis: { Aries: 50, Tauro: 80, Géminis: 70, Cáncer: 90, Leo: 65, Virgo: 85, Libra: 75, Escorpio: 85, Sagitario: 75, Capricornio: 80, Acuario: 70, Piscis: 60 }
+            };
+
+            const compatibilidad = compatibilidades[signoPropio]?.[signoPareja] || "Datos no disponibles";
+
+            const resultado = typeof compatibilidad === 'number' 
+                ? `Compatibilidad entre ${signoPropio} y ${signoPareja}: ${compatibilidad}%` 
+                : compatibilidad;
+
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+</body>
+</html>
