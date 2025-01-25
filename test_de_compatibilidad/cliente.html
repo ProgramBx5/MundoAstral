@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinastría con Submenús</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2> <a class="menuu" href="index.html">Menú</a> </h2>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Inicio</a>
+                        <ul class="submenu">
+                            <li><a href="introduccion.html">Introducción al test</a></li>
+                            <li><a href="introduccion.html">Qué es la compatibilidad astrológica</a></li>
+                            <li><a href="introduccion.html">Ejemplos de parejas famosas</a></li>
+                            <li><a href="introduccion.html">Noticias de astrología</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="test.html" class="submenu-toggle menu-p">Iniciar Test</a>
+                    <ul class="submenu">
+                        <li><a href="test.html">Realizar Test</a></li>                        
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="#" class="submenu-toggle menu-p">Resultados</a>
+                    <ul class="submenu">
+                        <li><a href="#resultados">Ver Resultados</a></li>
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Zodiaco y Compatibilidad</a>
+                    <ul class="submenu">
+                        <li><a href="#descripcion">Descripción de signos</a></li>
+                        <li><a href="#combinaciones">Combinaciones comunes</a></li>
+                        <li><a href="#elementos">Relación con elementos</a></li>
+                        <li><a href="#tendencias">Tendencias astrológicas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Recursos</a>
+                    <ul class="submenu">
+                        <li><a href="recursos.html">Blogs de astrología</a></li>
+                        <li><a href="recursos.html">Videos explicativos</a></li>
+                        <li><a href="recursos.html">Libros recomendados</a></li>
+                        <li><a href="recursos.html">Aplicaciones complementarias</a></li>
+                    </ul>
+                </li>
+                <li>
+                    
+                    <a href="login.html" 
+                    class="menu-p"
+                    >login</a>
+
+                    <!--
+                    class="submenu-toggle menu-p"
+                     <ul class="submenu">
+                        <li><a href="login.html">Blogs de astrología</a></li>
+                        <li><a href="login.html">Videos explicativos</a></li>
+                        <li><a href="login.html">Libros recomendados</a></li>
+                        <li><a href="login.html">Aplicaciones complementarias</a></li>
+                    </ul> -->
+                </li>
+            </ul>
+        </aside>
+
+        <div class="contenedor-test">
+        <section id="test">
+            <!-- Contenido Principal -->
+            <main class="content">
+                <header>
+                    <h1>Buenvenido cliente </h1>
+                </header>
+                <header>
+                    <h1>Compatibilidad de signos</h1>
+                </header>
+                <section>
+                    <h2>prueba que signo eres compatible</h2>
+                    <p>Explora la compatibilidad astrológica con nuestra herramienta.</p>
+                </section>
+            </main>
+            <div class="test-form">
+                <h2>Realiza tu Test</h2>
+                <label for="signoPropio">Selecciona tu signo zodiacal:</label>
+                <select id="signoPropio">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <label for="signoPareja">Selecciona el signo zodiacal de tu pareja:</label>
+                <select id="signoPareja">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <button onclick="calcularCompatibilidad()">Calcular Compatibilidad</button>
+    
+                <div id="resultado" class="results"></div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para mostrar/ocultar submenús
+         document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+            toggle.addEventListener('click', event => {
+                event.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                submenu.classList.toggle('active');
+            });
+        });
+    
+
+        function mostrarPanelAdministrador() {
+            document.body.innerHTML = `
+              <h1>Panel de Administrador</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${usuarios.map((user, index) => `
+                    <tr>
+                      <td>${user.username}</td>
+                      <td>${user.datos.nombre}</td>
+                      <td>${user.datos.email}</td>
+                      <td>${user.role}</td>
+                      <td>
+                        <button onclick="editarUsuario(${index})">Editar</button>
+                        <button onclick="eliminarUsuario(${index})">Eliminar</button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+              <button onclick="agregarUsuario()">Agregar Usuario</button>
+              <h2> <a class="menuu" href="index.html">Atras</a> </h2>
+            `;
+          }
+    </script>
+</body>
+</html>

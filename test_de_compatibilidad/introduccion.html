@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinastría con Submenús</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Barra Lateral -->
+        <aside class="sidebar">
+            <h2> <a class="menuu" href="index.html">Menú</a> </h2>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Inicio</a>
+                        <ul class="submenu">
+                            <li><a href="introduccion.html">Introducción al test</a></li>
+                            <li><a href="#test">Qué es la compatibilidad astrológica</a></li>
+                            <li><a href="#ejemplos">Ejemplos de parejas famosas</a></li>
+                            <li><a href="#noticias">Noticias de astrología</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="test.html" class="submenu-toggle menu-p">Iniciar Test</a>
+                    <ul class="submenu">
+                        <li><a href="test.html">Realizar Test</a></li>                                               
+                    </ul>
+                </li>
+                <!-- <li>
+                    <a href="#" class="submenu-toggle menu-p">Resultados</a>
+                    <ul class="submenu">
+                        <li><a href="#resultados">Ver Resultados</a></li>                        
+                    </ul>
+                </li> -->
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Zodiaco y Compatibilidad</a>
+                    <ul class="submenu">
+                        <li><a href="#descripcion">Descripción de signos</a></li>
+                        <li><a href="#combinaciones">Combinaciones comunes</a></li>
+                        <li><a href="#elementos">Relación con elementos</a></li>
+                        <li><a href="#tendencias">Tendencias astrológicas</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu-toggle menu-p">Recursos</a>
+                    <ul class="submenu">
+                        <li><a href="recursos.html">Blogs de astrología</a></li>
+                        <li><a href="recursos.html">Videos explicativos</a></li>
+                        <li><a href="recursos.html">Libros recomendados</a></li>
+                        <li><a href="recursos.html">Aplicaciones complementarias</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="login.html" 
+                    class="menu-p"
+                    >login</a>
+                </li>
+                <li>
+                    <a href="perfil.html" 
+                    class="menu-p"
+                    >perfil</a>
+                </li>
+            </ul>
+        </aside>
+
+        
+        <!-- Contenido Principal -->
+        <!-- <section id="test">
+            <main class="content">
+                <header>
+                    <h1>Compatibilidad de signos</h1>
+                </header>
+                <section>
+                    <h2>prueba que signo eres compatible</h2>
+                    <p>Explora la compatibilidad astrológica con nuestra herramienta.</p>
+                </section>
+            </main>
+            <div class="test-form">
+                <h2>Realiza tu Test</h2>
+                <label for="signoPropio">Selecciona tu signo zodiacal:</label>
+                <select id="signoPropio">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <label for="signoPareja">Selecciona el signo zodiacal de tu pareja:</label>
+                <select id="signoPareja">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <button onclick="calcularCompatibilidad()">Calcular Compatibilidad</button>
+    
+                <div id="resultado" class="results"></div>
+            </div>
+        </section>
+    </div> -->
+
+    <div class="cont-introduccion"> 
+        <div id="test" class="boxt test">
+            <h1 class="title_cont intro"> Introducción al test  </h1>
+            <p class="text-cont intro">Según la leyenda, Isaac Newton, considerado el mayor genio de todos los tiempos, 
+                pudo haber explorado el campo de la astrología. Newton tenía una mente compleja y curiosa. 
+                Además de desarrollar el cálculo matemático y descubrir la ley de la gravitación universal, 
+                a Newton le interesaba la alquimia (el arte de convertir metales ordinarios en oro), la Biblia y 
+                la astrología. Cuando su amigo Edmund Halley (de quien toma nombre el cometa) hizo un comentario despectivo al respecto, Newton, un capricornio reservado, se apresuró a contestar: “Yo, señor, he estudiado el tema. Usted, no”. O al menos así lo cuenta la historia. Como cualquier otro astrólogo, me gusta pensar que esta historia es cierta. Al fin y al cabo, la astrología ha sobrevivido a las modas y se ha desvanecido también ante ellas, pero nunca ha tenido que lamentar la falta de seguidores. Catalina de Medici tuvo un astrólogo: Nostradamus; la reina Isabel I de Inglaterra, otro: John Dee; y otras personalidades de la talla de Napoleón, George Washington, J. P. Morgan y Ronald Reagan se dejaron aconsejar también por entendidos en el tema. En todo este tiempo, nadie había ofrecido todavía una explicación satisfactoria sobre el funcionamiento de la astrología. Durante siglos, los defensores del arte antiguo habían sugerido que el motor de la astrología tenía que ser la gravedad, el electromagnetismo o la ley metafísica de las correspondencias. El famoso psiquiatra, psicólogo y ensayista suizo Carl Jung lo resumió con la siguiente frase: “Nacemos en un momento dado, en un lugar determinado y, como los vinos, tenemos las cualidades del año y la estación en la que nacemos”. No sé exactamente cómo funciona la astrología, como tampoco lo sabía Isaac Newton, pero puedo asegurarte que funciona. El patrón que trazan los planetas en el momento de tu nacimiento, es decir, tu carta astral u horóscopo, caracteriza tus tendencias, habilidades, retos y potencial. No te predice el futuro, aunque sí tiene en cuenta las posibilidades del destino. En mi opinión, la forma exacta que tome, depende de ti. En este capítulo me sumerjo en la astronomía que hay tras la astrología, así como en los signos del Zodíaco y los componentes de la carta astral.</p>
+        </div>
+        <div id="compatibilidad" class="boxt compatibilidad">
+            <h1 class="title_cont intro"> ¿Qué es la compatibilidad astrológica?  </h1>
+            <p class="text-cont intro">Una de las temáticas más populares al momento de hablar de astrología es la compatibilidad entre signos. Muchos desean analizar la carta natal de su persona de interés, familiares o amigos para comprender más las dinámicas con ellos. Algunas personas incluso tienen en cuenta estos datos al momento de elegir una pareja. Si bien es necesario realizar un examen integral de los datos astrales, es posible guiarse por el signo solar de alguien para conocer cómo serán y cómo congeniarán con uno.
+                La afinidad entre signos puede deberse a la química que exista entre sus elementos. En astrología, aquellos que pertenezcan al mismo grupo sentirán una mayor atracción entre sí. Asimismo, existen dinámicas naturales que establecen el tipo de relación que tendrán. Los signos del elemento Agua se sentirán cómodos con los de Tierra, ya que se nutren entre sí. Por su parte, el Aire y el Fuego se llevan bien porque uno potencia al otro.
+                Los planetas son otros de los grandes aliados a la hora de generar vínculos. Algunas constelaciones comparten su regente, por lo que se llevarán maravillosamente.
+                A continuación, los signos del Zodíaco que son compatibles entre sí.
+            </p>
+            
+            
+            <!-- <p> -->
+
+                <h2>Aries - Libra</h2>
+                <p class="text-cont">
+                    Se trata de dos opuestos complementarios, que se refiere a aquellos signos que se encuentran ubicados en el extremo contrario de la rueda zodiacal. Esto crea un balance entre sus nacidos, ya que pueden suplementar las cualidades que el otro carece. En el caso del carnero, se sentirá atraído por la belleza del signo de la balanza. Su sutileza y capacidad de reflexión le servirá de aprendizaje. En tanto, Libra comprenderá junto a Aries que es necesario tomar acción y animarse a cumplir sus sueños.
+                </p>
+                <h2>Tauro - Escorpio</h2>
+                <p class="text-cont">Esta es otra de las duplas célebres del Zodíaco, que pueden llegar a tener un vínculo tan duradero como profundo. Al ser opuestos complementarios, encuentran lo que les falta en el otro. Escorpio necesita sentirse seguro para poder así confiarle sus mayores secretos y vulnerabilidades a su persona de interés. Tauro sabrá proveerle la estabilidad y lealtad que tanto necesita. Por su parte, el toro sabrá disfrutar del amor incondicional y apasionado del escorpión.</p>
+                <h2>Géminis - Aries</h2>
+                <p class="text-cont">Se trata de una combinación de Aire y Fuego que podrá llegar muy lejos. Poseen ciertas cualidades en común que les hace sentir atraídos con facilidad. Ambos comprenden la importancia de las relaciones sociales y el dar una buena impresión a los demás. Son extrovertidos y se motivan entre sí a superar sus miedos. Conquistarán cualquier meta que se propongan gracias a su apoyo mutuo.</p>
+                <h2>Cáncer - Tauro</h2>
+                <p class="text-cont">Esta es, sin dudas, una de las relaciones más tiernas y románticas del Zodíaco. Se trata de dos signos que se encuentran orientados a los valores convencionales, la familia y el hogar. Adoran pasar tiempo de calidad con sus seres queridos, sin dejarse llevar por la extravagancia y los lujos. Cáncer ayudará a Tauro a salir de su mentalidad un tanto seria y cerrada, mientras que el toro le otorgará mayor determinación al cangrejo.</p>
+                <h2>Leo - Piscis</h2>
+                <p class="text-cont">Los nacidos bajo el signo de Leo adoran pasarla bien y ser el centro de atención. Es así que les gusta relacionarse con personas que los motiven y celebren sus logros. Piscis admirará su personalidad divertida y alentará a compartirla con otros. Juntos pasarán momentos de lo más divertidos e inolvidables.</p>
+                <h2>Virgo - Géminis</h2>
+                <p class="text-cont">Mercurio es el planeta regente de estos dos signos, que si bien poseen naturalezas y elementos distintos, pueden lograr una gran química. Virgo sabrá inspirar a Géminis a ser menos impulsivo y más cuidadoso con sus pensamientos, mientras que el signo de los gemelos le aportará diversión y ternura.</p>
+                <h2>Libra - Capricornio</h2>
+                <p class="text-cont">Si bien sus elementos no son los más compatibles, esta dupla sorprenderá a los demás. Es que se trata de personas que poseen gustos similares y cuidan la imagen, los modales y la manera de desenvolverse en público. Esto los hará sentir atraídos entre sí y tendrán una relación que podría ir de a poco, pero con el tiempo puede que llegue a convertirse en algo duradero.</p>
+                <h2>Escorpio - Virgo</h2>
+                <p class="text-cont">Las personas de Escorpio buscan una pareja que sea estable, que cuente con grandes valores y un corazón fiel. No les gustan las personas demasiado extrovertidas, que sean vanidosas o deseen llamar la atención. Su perfil bajo los hace conectar con seres inteligentes, de buenos sentimientos y sinceros. Virgo sabrá cumplir sus expectativas y ayudarle a dar un poco de razonamiento a su mente tan emocional.</p>
+                <h2>Sagitario - Géminis</h2>
+                <p class="text-cont">Una pareja explosiva surgirá de esta combinación astrológica. Se trata de dos signos que saben potenciarse entre sí. Sagitario es aventurero, adora salir de fiesta y hacer amigos. Géminis, por su parte, necesita estar rodeado de personas para sentirse feliz, por lo que serán grandes compañeros de salidas, viajes y experiencias únicas.</p>
+                <h2>Capricornio - Cáncer</h2>
+                <p class="text-cont">Las personas de Capricornio son muy profesionales y se encuentran orientadas hacia su vida profesional. Es por eso que, por momentos, les cuenta conectar con su costado más vulnerable. Es por ello que lograrán congeniar con Cáncer, ya que es uno de los signos más sensibles del Zodíaco. El signo del cangrejo les enseñará a guiarse por su corazón y entregarse al amor.</p>
+                <h2>Acuario - Leo</h2>
+                <p class="text-cont">Estos son otros de los opuestos complementarios, que se caracterizan por su independencia y necesidad de destacar de entre la multitud. El signo del aguador disfruta de hacer las cosas de manera diferente, por lo que busca parejas extravagantes que sepan vivir bajo sus propias reglas, sin importar las miradas de otros.    </p>
+                <h2>Piscis - Virgo</h2>
+                <p class="text-cont">En el amor, las personas de Piscis buscan a alguien compañero, pero lo suficientemente independiente para comprender sus necesidades y gustos. Es que por momentos prefieren realizar actividades en solitario, puesto que no toleran las demandas y celos. Virgo sabrá cumplir con sus expectativas, ya que cuentan con una agenda ocupada y un corazón noble.</p>
+                
+            <!-- </p> -->
+        </div>
+        <div id="ejemplos" class="boxt ejemplos">
+            <h1>Ejemplos de parejas famosas</h1>
+            <h2> Jessica Biel y Justin Timberlake </h2>
+            <p class="text-cont">
+            La pareja lleva casada desde el 2012 y demuestra constantemente la hermosa familia que tienen. De acuerdo con la astrología, si Jessica es piscis y Justin acuario, su compatibilidad no debería ser tan bella y fluida como realmente lo es.
+                Acuario suele ser un poco más impersonal y perderse en sus pensamientos, mientras que piscis es un romántico empedernido que busca constantemente un cuento de hadas.
+                Dos signos que probablemente tendrían problemas para convivir y ponerse de acuerdo. No obstante, la historia de Biel y Timberlake desafía estos entendidos.
+            </p>
+            <img class="imagen-intro" src="img/1.jpg" alt="Jessica Biel y Justin Timberlake">
+            
+            
+            <h2>#2 Chrissy Teigen y John Legend</h2>
+            <p class="text-cont">
+            John Legend creó una de las canciones más románticas: 'All of me', con la cual no quedó duda de todo el amor entre él y su esposa Chrissy Teigen. En esta canción incluso tenemos ciertos vistazos de la vitalidad e ingenio de Teigen, quien es sagitario.
+            De acuerdo con la astrología, sagitario es un signo que ama la libertad y los riesgos, y no es compatible con capricornio, el signo de John, que suele ser organizado y tal vez un poco aburrido para sagitario.
+            Sin embargo, la dinámica de la bella pareja demuestra que ellos van en contra de esta incompatibilidad astrológica.
+            </p>
+            <img class="imagen-intro" src="img/2.jpg" alt="Chrissy Teigen y John Legend">
+            
+            
+            <h2>#3 Victoria Beckham y David Beckham</h2>
+            <p>Con más de dos décadas de conocerse, los Beckhams figuran como una de las couple goals más emblemáticas de la industria. Sin embargo, sus signos zodiacales podrían haber apuntado un dispar bastante molesto.
+                David es tauro, un signo que opta por la estabilidad y porque las cosas fluyan a su debido tiempo. Mientras que Victoria es aries, un signo mucho más impulsivo que tauro.
+                A pesar de la incompatibilidad astrológica, los Beckhams demuestran su bello amor no sólo como pareja, sino como una hermosa familia con sus cuatro hijos.
+            </p>
+            <img class="imagen-intro" src="img/3.jpg" alt="Victoria Beckham y David Beckham">
+
+            <h2>#4 Michelle Obama y Barack Obama</h2>
+            <p class="text-cont">
+                Con más de dos décadas de conocerse, los Beckhams figuran como una de las couple goals más emblemáticas de la industria. Sin embargo, sus signos zodiacales podrían haber apuntado un dispar bastante molesto.
+            David es tauro, un signo que opta por la estabilidad y porque las cosas fluyan a su debido tiempo. Mientras que Victoria es aries, un signo mucho más impulsivo que tauro.
+            A pesar de la incompatibilidad astrológica, los Beckhams demuestran su bello amor no sólo como pareja, sino como una hermosa familia con sus cuatro hijos.
+            </p>
+            <img class="imagen-intro" src="img/4.jpg" alt="Michelle Obama y Barack Obama">
+
+            <h2>#5 Messi y Antonela Roccuzzo, Cancer y Piscis:</h2>
+            <p class="text-cont">
+                se trata de una de las parejas más estables y envidiables dentro del ámbito del futbol. Ambos se conocieron en las vacaciones de verano de un conocido del jugador del PSG. El futbolista contó que cuando la vio por primera vez quedo enamorado a primera vista, y desde ese momento su amor creció y se fortaleció hasta la actualidad. El de Cáncer y ella de Piscis demuestran que su unión es sincera y que aumenta con los años. Su unión, según el horóscopo, resulta ser equilibrada, puesto que ni una parte ni la otra se altera con facilidad, y menos todavía cuando se unen.
+            </p>
+            <img class="imagen-intro" src="img/5.jpg" alt="Messi y Antonela Roccuzzo, Cancer y Piscis">
+
+            
+
+        </div>
+        <div id="noticias" class="boxt noticias">
+            <h1>Noticias de astrología</h1>
+            <h2>Horóscopo semanal: predicciones del 6 al 12 de enero de 2025 para todos los signos zodiacales</h2>
+            <p class="text-cont">
+                El horóscopo semanal del 6 al 12 de enero de 2025 anuncia que Marte retrógrado vuelve a Cáncer, Mercurio estará en tensión con Neptuno e ingresa al signo de Capricornio. La Luna, por su parte, inicia su fase creciente en Aries.
+            Bajo la tensión de Mercurio y Neptuno siempre se recomienda evitar grandes decisiones, negocios, firmas y acuerdos, será mejor analizar y meditar sobre estas. Es un aspecto que nos deja a disposición de malentendidos, discusiones y "teléfonos descompuestos" que suman confusión.
+            El ingreso de Mercurio en Capricornio y la Luna creciente en Aries nos disponen a trabajar con mayor dedicación y esfuerzo sobre nuestras metas a mediano y largo plazo.
+            </p>
+            <h2>Horóscopo semanal para Aries</h2>
+            <p class="text-cont">
+                La semana comienza con la Luna transitando su signo, disponiéndoles a cuidar su mundo interno, mejorar su rutina, nutrición y descanso. Su planeta regente, Marte, sigue en fase retrógrada y vuelve al área de hogar y familia, su raíz personal. Es un momento para repasar situaciones que sucedieron en octubre de 2023 para darles una resolución, mediten sobre sus emociones y reacciones.
+            </p>
+            <h2>Horóscopo semanal para Tauro</h2>
+            <p class="text-cont">
+                La semana estará marcada por el tránsito de Marte retrógrado en su área de comunicación y relaciones, invitándoles a meditar sobre emociones que necesitan expresar. Quizá haya decisiones importantes que someter a revisión. El martes por la tarde, la Luna creciente ingresa a su signo, brindándoles mayor sensibilidad, prioridad y magnetismo para atender sus necesidades y deseos personales, cuidar de su nutrición y rutina.
+            </p>
+            <h2>Horóscopo semanal para Géminis</h2>
+            <p class="text-cont">
+                La semana comienza con su planeta regente, Mercurio, en tensión con Neptuno, por lo que tendrán que cuidar de su liderazgo y responsabilidades. Registren a los demás para evitar malentendidos. El miércoles, Mercurio ingresa a su mundo íntimo, marcando el inicio de un viaje hacia sus memorias más profundas, es un período de mayor intensidad y sensibilidad, propicio para las terapias de sanación de todo tipo.
+            </p>
+            <h2>Horóscopo semanal para Cáncer</h2>
+            <p class="text-cont">
+                La semana estará marcada por el regreso de Marte retrógrado a su signo, es un período para revisar su autoafirmación, los límites, las decisiones personales, su carácter y la forma en la que se relacionan con los demás. El Sol y Mercurio transitando su área de relaciones les trae oportunidades y movimientos en conjunto, mayor claridad sobre sus vínculos, búsqueda de mejoras y nuevos acuerdos.
+            </p>
+            <h2>Horóscopo semanal para Leo</h2>
+            <p class="text-cont">
+                La semana estará marcada por el tránsito del Sol y el ingreso de Mercurio en su área de rutina y asuntos laborales. Son días claves para mejorar cualquier aspecto de sus hábitos diarios, ordenarse, atender pendientes, planificar y organizarse.
+            </p>
+            <h2>Horóscopo semanal para Virgo</h2>
+            <p class="text-cont">
+                La semana estará marcada por el ingreso de su planeta regente, Mercurio, en el área de proyectos y búsquedas personales, asuntos creativos y románticos, brindándoles mayor conexión con ustedes mismos y aquello que nace desde su corazón.
+            </p>
+            <h2>Horóscopo semanal para Libra</h2>
+            <p class="text-cont">
+                La semana estará marcada por el regreso de Marte a su mundo profesional y laboral. Seguramente mediten sobre decisiones que tomaron, su situación actual y las búsquedas u oportunidades posibles que desean emprender. Es un momento clave para mejorar su forma de asumir responsabilidades y ejercer liderazgo.
+            </p>
+            <h2>Horóscopo semanal para Escorpio</h2>
+            <p class="text-cont">
+                La semana estará marcada por el ingreso de Mercurio en su área de relaciones y comunicación, es un período importante para viajes de negocios, firmas y acuerdos, estudios y enseñanzas, mejorar su promoción y estrategias de marketing. Son semanas claves para la observación, análisis y planificación de sus próximas acciones.
+            </p>
+            <h2>Horóscopo semanal para Sagitario</h2>
+            <p class="text-cont"> 
+                La semana estará marcada por Mercurio en tensión con Neptuno, invitándoles a medir sus energías para atender pendientes personales importantes, el hogar y la familia, también asuntos laborales. El Sol y Mercurio en su área de recursos materiales y económicos les habilita nuevas posibilidades de generar ingresos, invertir o mejorar su negocio.
+            </p>
+            <h2>Horóscopo semanal para Capricornio</h2>
+            <p class="text-cont"> 
+                Esta semana Mercurio ingresa a su signo, trayendo mayor claridad para tomar grandes decisiones personales que no tardarán en ejecutar. Atención: planifiquen todo cuidadosamente antes de lanzarse a terrenos desconocidos. Por otra parte, Marte regresa a su área de relaciones, trayendo la oportunidad de rever situaciones y decisiones, acuerdos con socios o una relación cercana muy importante.
+            </p>
+            <h2>Horóscopo semanal para Acuario</h2>
+            <p class="text-cont"> 
+                La semana estará marcada por el ingreso de Marte a su área de trabajo y rutina, invitándoles a revisar sus pendientes profesionales, mejorar sus hábitos diarios y cuidar de su salud y nutrición. Quizá sientan este periodo como la búsqueda de mayor libertad laboral o financiera, aprovechen el tránsito del planeta guerrero para fortalecer sus recursos o adquirir nuevas habilidades.
+            </p>
+            <h2>Horóscopo semanal para Piscis</h2>
+            <p class="text-cont"> 
+                La semana estará marcada por el ingreso de Marte retrógrado a su área de proyectos y búsquedas individuales, es un período de revisión sobre cómo encaran estos procesos, soltar viejas memorias de luchas y control, darles fluidez y mayor confianza a los tiempos y formas. Reconozcan deseos pendientes, pues aquello que les apasiona se estará manifestando como una enorme necesidad en sus vidas.
+            </p>
+
+
+
+        </div>
+    </div>
+</body>
+<script>
+    // Lógica para mostrar/ocultar submenús
+     document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+        toggle.addEventListener('click', event => {
+            event.preventDefault();
+            const submenu = toggle.nextElementSibling;
+            submenu.classList.toggle('active');
+        });
+    });
+</script>   
+</html>
