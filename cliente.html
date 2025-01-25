@@ -30,7 +30,7 @@
                 <!-- <li>
                     <a href="#" class="submenu-toggle menu-p">Resultados</a>
                     <ul class="submenu">
-                        <li><a href="#resultados">Ver Resultados</a></li>                        
+                        <li><a href="#resultados">Ver Resultados</a></li>
                     </ul>
                 </li> -->
                 <li>
@@ -52,16 +52,30 @@
                     </ul>
                 </li>
                 <li>
+                    
                     <a href="login.html" 
                     class="menu-p"
                     >login</a>
+
+                    <!--
+                    class="submenu-toggle menu-p"
+                     <ul class="submenu">
+                        <li><a href="login.html">Blogs de astrología</a></li>
+                        <li><a href="login.html">Videos explicativos</a></li>
+                        <li><a href="login.html">Libros recomendados</a></li>
+                        <li><a href="login.html">Aplicaciones complementarias</a></li>
+                    </ul> -->
                 </li>
             </ul>
         </aside>
 
+        <div class="contenedor-test">
         <section id="test">
             <!-- Contenido Principal -->
             <main class="content">
+                <header>
+                    <h1>Buenvenido cliente </h1>
+                </header>
                 <header>
                     <h1>Compatibilidad de signos</h1>
                 </header>
@@ -111,48 +125,52 @@
                 <div id="resultado" class="results"></div>
             </div>
         </section>
-</body>
-<script>
-    // Lógica para mostrar/ocultar submenús
-     document.querySelectorAll('.submenu-toggle').forEach(toggle => {
-        toggle.addEventListener('click', event => {
-            event.preventDefault();
-            const submenu = toggle.nextElementSibling;
-            submenu.classList.toggle('active');
+        </div>
+    </div>
+
+    <script>
+        // Lógica para mostrar/ocultar submenús
+         document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+            toggle.addEventListener('click', event => {
+                event.preventDefault();
+                const submenu = toggle.nextElementSibling;
+                submenu.classList.toggle('active');
+            });
         });
-    });
-    // funciones para la compatibilidad
-    function calcularCompatibilidad() {
-        const signoPropio = document.getElementById('signoPropio').value;
-        const signoPareja = document.getElementById('signoPareja').value;
+    
 
-        if (!signoPropio || !signoPareja) {
-            alert('Por favor, selecciona todas las opciones para continuar.');
-            return;
-        }
-
-        const compatibilidades = {
-            Aries: { Aries: 50, Tauro: 70, Géminis: 90, Cáncer: 60, Leo: 85, Virgo: 55, Libra: 75, Escorpio: 65, Sagitario: 95, Capricornio: 45, Acuario: 80, Piscis: 50 },
-            Tauro: { Aries: 70, Tauro: 60, Géminis: 55, Cáncer: 85, Leo: 50, Virgo: 90, Libra: 65, Escorpio: 75, Sagitario: 40, Capricornio: 95, Acuario: 45, Piscis: 80 },
-            Géminis: { Aries: 90, Tauro: 55, Géminis: 70, Cáncer: 50, Leo: 85, Virgo: 65, Libra: 95, Escorpio: 60, Sagitario: 80, Capricornio: 45, Acuario: 90, Piscis: 70 },
-            Cáncer: { Aries: 60, Tauro: 85, Géminis: 50, Cáncer: 75, Leo: 65, Virgo: 80, Libra: 55, Escorpio: 95, Sagitario: 40, Capricornio: 85, Acuario: 50, Piscis: 90 },
-            Leo: { Aries: 85, Tauro: 50, Géminis: 85, Cáncer: 65, Leo: 70, Virgo: 60, Libra: 90, Escorpio: 75, Sagitario: 95, Capricornio: 55, Acuario: 85, Piscis: 65 },
-            Virgo: { Aries: 55, Tauro: 90, Géminis: 65, Cáncer: 80, Leo: 60, Virgo: 75, Libra: 70, Escorpio: 85, Sagitario: 50, Capricornio: 95, Acuario: 45, Piscis: 85 },
-            Libra: { Aries: 75, Tauro: 65, Géminis: 95, Cáncer: 55, Leo: 90, Virgo: 70, Libra: 80, Escorpio: 65, Sagitario: 85, Capricornio: 50, Acuario: 95, Piscis: 75 },
-            Escorpio: { Aries: 65, Tauro: 75, Géminis: 60, Cáncer: 95, Leo: 75, Virgo: 85, Libra: 65, Escorpio: 70, Sagitario: 55, Capricornio: 90, Acuario: 50, Piscis: 85 },
-            Sagitario: { Aries: 95, Tauro: 40, Géminis: 80, Cáncer: 40, Leo: 95, Virgo: 50, Libra: 85, Escorpio: 55, Sagitario: 70, Capricornio: 60, Acuario: 90, Piscis: 75 },
-            Capricornio: { Aries: 45, Tauro: 95, Géminis: 45, Cáncer: 85, Leo: 55, Virgo: 95, Libra: 50, Escorpio: 90, Sagitario: 60, Capricornio: 70, Acuario: 65, Piscis: 80 },
-            Acuario: { Aries: 80, Tauro: 45, Géminis: 90, Cáncer: 50, Leo: 85, Virgo: 45, Libra: 95, Escorpio: 50, Sagitario: 90, Capricornio: 65, Acuario: 75, Piscis: 70 },
-            Piscis: { Aries: 50, Tauro: 80, Géminis: 70, Cáncer: 90, Leo: 65, Virgo: 85, Libra: 75, Escorpio: 85, Sagitario: 75, Capricornio: 80, Acuario: 70, Piscis: 60 }
-        };
-
-        const compatibilidad = compatibilidades[signoPropio]?.[signoPareja] || "Datos no disponibles";
-
-        const resultado = typeof compatibilidad === 'number' 
-            ? `Compatibilidad entre ${signoPropio} y ${signoPareja}: ${compatibilidad}%` 
-            : compatibilidad;
-
-        document.getElementById('resultado').textContent = resultado;
-    }
-</script> 
+        function mostrarPanelAdministrador() {
+            document.body.innerHTML = `
+              <h1>Panel de Administrador</h1>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Usuario</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${usuarios.map((user, index) => `
+                    <tr>
+                      <td>${user.username}</td>
+                      <td>${user.datos.nombre}</td>
+                      <td>${user.datos.email}</td>
+                      <td>${user.role}</td>
+                      <td>
+                        <button onclick="editarUsuario(${index})">Editar</button>
+                        <button onclick="eliminarUsuario(${index})">Eliminar</button>
+                      </td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+              <button onclick="agregarUsuario()">Agregar Usuario</button>
+              <h2> <a class="menuu" href="index.html">Atras</a> </h2>
+            `;
+          }
+    </script>
+</body>
 </html>

@@ -27,6 +27,12 @@
                         <li><a href="test.html">Realizar Test</a></li>                                               
                     </ul>
                 </li>
+                <!-- <li>
+                    <a href="#" class="submenu-toggle menu-p">Resultados</a>
+                    <ul class="submenu">
+                        <li><a href="#resultados">Ver Resultados</a></li>                        
+                    </ul>
+                </li> -->
                 <li>
                     <a href="#" class="submenu-toggle menu-p">Zodiaco y Compatibilidad</a>
                     <ul class="submenu">
@@ -45,9 +51,73 @@
                         <li><a href="recursos.html">Aplicaciones complementarias</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="login.html" 
+                    class="menu-p"
+                    >login</a>
+                </li>
+                <li>
+                    <a href="perfil.html" 
+                    class="menu-p"
+                    >perfil</a>
+                </li>
             </ul>
         </aside>
 
+        
+        <!-- Contenido Principal -->
+        <!-- <section id="test">
+            <main class="content">
+                <header>
+                    <h1>Compatibilidad de signos</h1>
+                </header>
+                <section>
+                    <h2>prueba que signo eres compatible</h2>
+                    <p>Explora la compatibilidad astrológica con nuestra herramienta.</p>
+                </section>
+            </main>
+            <div class="test-form">
+                <h2>Realiza tu Test</h2>
+                <label for="signoPropio">Selecciona tu signo zodiacal:</label>
+                <select id="signoPropio">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <label for="signoPareja">Selecciona el signo zodiacal de tu pareja:</label>
+                <select id="signoPareja">
+                    <option value="">-- Selecciona --</option>
+                    <option value="Aries">Aries</option>
+                    <option value="Tauro">Tauro</option>
+                    <option value="Géminis">Géminis</option>
+                    <option value="Cáncer">Cáncer</option>
+                    <option value="Leo">Leo</option>
+                    <option value="Virgo">Virgo</option>
+                    <option value="Libra">Libra</option>
+                    <option value="Escorpio">Escorpio</option>
+                    <option value="Sagitario">Sagitario</option>
+                    <option value="Capricornio">Capricornio</option>
+                    <option value="Acuario">Acuario</option>
+                    <option value="Piscis">Piscis</option>
+                </select>
+    
+                <button onclick="calcularCompatibilidad()">Calcular Compatibilidad</button>
+    
+                <div id="resultado" class="results"></div>
+            </div>
+        </section>
+    </div> -->
 
     <div class="cont-introduccion"> 
         <div id="test" class="boxt test">
@@ -100,7 +170,7 @@
         </div>
         <div id="ejemplos" class="boxt ejemplos">
             <h1>Ejemplos de parejas famosas</h1>
-            <h2> #1 Jessica Biel y Justin Timberlake </h2>
+            <h2> Jessica Biel y Justin Timberlake </h2>
             <p class="text-cont">
             La pareja lleva casada desde el 2012 y demuestra constantemente la hermosa familia que tienen. De acuerdo con la astrología, si Jessica es piscis y Justin acuario, su compatibilidad no debería ser tan bella y fluida como realmente lo es.
                 Acuario suele ser un poco más impersonal y perderse en sus pensamientos, mientras que piscis es un romántico empedernido que busca constantemente un cuento de hadas.
@@ -198,11 +268,14 @@
             <p class="text-cont"> 
                 La semana estará marcada por el ingreso de Marte retrógrado a su área de proyectos y búsquedas individuales, es un período de revisión sobre cómo encaran estos procesos, soltar viejas memorias de luchas y control, darles fluidez y mayor confianza a los tiempos y formas. Reconozcan deseos pendientes, pues aquello que les apasiona se estará manifestando como una enorme necesidad en sus vidas.
             </p>
+
+
+
         </div>
     </div>
 </body>
 <script>
-    // Lógica para mostrar/ocultarr submenús
+    // Lógica para mostrar/ocultar submenús
      document.querySelectorAll('.submenu-toggle').forEach(toggle => {
         toggle.addEventListener('click', event => {
             event.preventDefault();
